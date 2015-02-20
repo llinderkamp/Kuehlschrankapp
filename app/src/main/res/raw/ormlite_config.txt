@@ -1,0 +1,159 @@
+#
+# generated on 2015/02/20 12:10:34
+#
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Artikel
+tableName=artikel
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=einheitEinkauf
+columnName=einheit_einkauf_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=einheitKochen
+columnName=einheit_kochen_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=kategorie
+columnName=kategorie_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=istLebensmittel
+# --field-end--
+# --field-start--
+fieldName=standardmenge
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Einheit
+tableName=einheit
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=einheit
+# --field-end--
+# --field-start--
+fieldName=kuerzel
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Einkaufsliste
+tableName=einkaufsliste
+# --table-fields-start--
+# --field-start--
+fieldName=artikel
+columnName=artikel_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=menge
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Kategorie
+tableName=kategorie
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=iconName
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Rezept_hat_Artikel
+tableName=rezept_hat_artikel
+# --table-fields-start--
+# --field-start--
+fieldName=rezept
+columnName=rezept_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=artikel
+columnName=artikel_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=menge
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Rezept
+tableName=rezept
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=zubereitung
+# --field-end--
+# --field-start--
+fieldName=portionen
+# --field-end--
+# --field-start--
+fieldName=zubereitungszeit
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=com.kuehlschrankapp.db.dto.impl.Vorhandene_Lebensmittel
+tableName=vorhandene_lebensmittel
+# --table-fields-start--
+# --field-start--
+fieldName=artikel
+columnName=artikel_id
+foreign=true
+foreignColumnName=id
+# --field-end--
+# --field-start--
+fieldName=menge
+# --field-end--
+# --field-start--
+fieldName=favorit
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
