@@ -25,7 +25,6 @@ public class Artikel {
         this.itemDescription = a_itemDescription;
         this.amount = a_amount;
         this.isFood = a_isFood;
-
     }
 
     public boolean isFood() {
