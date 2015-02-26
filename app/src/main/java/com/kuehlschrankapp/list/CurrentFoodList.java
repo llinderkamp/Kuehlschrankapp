@@ -43,14 +43,9 @@ public class CurrentFoodList extends Liste {
 
     }
 
-//============================================================
-//  ATTRIBUTE
-//============================================================
-
-Artikel art;
-ArrayList<Artikel> currentFoodList = new ArrayList<Artikel>();
 
 
 
 
-}//CurrentFoodList
+
+}

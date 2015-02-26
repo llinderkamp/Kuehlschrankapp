@@ -8,6 +8,12 @@ import java.util.ArrayList;
  */
 public class Recipe extends Liste {
 
+
+    private String name;
+    private String preparation;
+    private int portion;
+
+
     /**
      * ctor
      */
@@ -17,44 +23,20 @@ public class Recipe extends Liste {
 
     /**
      * Erweiterter Ctor
-     * @param aName
-     * @param aPreparation
-     * @param aPortion
-     * @param aOwnRecipe
+     * @param name
+     * @param preparation
+     * @param portion
+     * @param ownRecipe
      */
-    public  Recipe( String aName, String aPreparation, int aPortion, boolean aOwnRecipe )
+    public  Recipe( String name, String preparation, int portion, boolean ownRecipe )
     {
-        this.name = aName;
-        this.preparation = aPreparation;
-        this.portion = aPortion;
-        this.ownRecipe = aOwnRecipe;
+        this.name = name;
+        this.preparation = preparation;
+        this.portion = portion;
+
 
     }
 
-    /**
-     * Erstellt ein Rezept
-     */
-    @Override
-    public void createList(){
-
-        recipeList.add(this);
-    }
-
-    /**
-     * Lädt ein Rezept
-     */
-    @Override
-    public void loadList() {
-
-    }
-
-    /**
-     * Bearbeitet ein Rezept
-     */
-    @Override
-    public void updateList() {
-
-    }
 
     public String getName() {
         return name;
@@ -80,27 +62,39 @@ public class Recipe extends Liste {
         this.portion = portion;
     }
 
-    public boolean isOwnRecipe() {
-        return ownRecipe;
+
+    /**
+     * Erstellt ein Rezept
+     */
+    @Override
+    public void createList(){
+
+
     }
 
-    public void setOwnRecipe(boolean ownRecipe) {
-        this.ownRecipe = ownRecipe;
+    /**
+     * Lädt ein Rezept
+     */
+    @Override
+    public void loadList() {
+
     }
 
-//===================================================
-//  ATTRIBUTE
-//===================================================
-    private String name;
-    private String preparation;
-    private int portion;
-    private boolean ownRecipe;
+    /**
+     * Bearbeitet ein Rezept
+     */
+    @Override
+    public void updateList() {
 
-    ArrayList<Recipe> recipeList = new ArrayList<Recipe>();
-    Artikel art;
+    }
 
 
 
 
 
-}//Recipe
+
+
+
+
+
+}

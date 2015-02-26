@@ -24,6 +24,6 @@ public abstract class Liste {
      */
     public abstract void updateList();
 
-    //public ArrayList<Artikel> artikelList = new ArrayList<Artikel>();
 
-}//Liste
+
+}

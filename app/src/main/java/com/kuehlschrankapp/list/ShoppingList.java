@@ -23,6 +23,11 @@ public class ShoppingList extends Liste {
 
     }
 
+   public void createList(Artikel art){
+
+   }
+
+
     /**
      * lädt eine Einkaufliste
      */
@@ -39,11 +44,6 @@ public class ShoppingList extends Liste {
 
     }
 
-//============================================
-//   ATTRIBUTE
-//===========================================
-
-ArrayList<Artikel> shopList = new ArrayList<Artikel>();
 
 
 
@@ -52,5 +52,5 @@ ArrayList<Artikel> shopList = new ArrayList<Artikel>();
 
 
 
-}//ShoppingList
+}
 

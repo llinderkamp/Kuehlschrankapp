@@ -8,6 +8,13 @@ import java.util.List;
  */
 public class Artikel {
 
+    private String itemDescription;
+    private int amount;
+    private String unit;
+    private boolean isFood = true;
+    private String type;
+
+
     /**
      * ctor
      */
@@ -15,16 +22,11 @@ public class Artikel {
 
     }
 
-    /**
-     * Erweiterter Ctor
-     * @param a_itemDescription
-     * @param a_amount
-     * @param a_isFood
-     */
-    public Artikel( String a_itemDescription, int a_amount, boolean a_isFood, String aUnit ) {
-        this.itemDescription = a_itemDescription;
-        this.amount = a_amount;
-        this.isFood = a_isFood;
+    public Artikel( String itemDescription, int amount, boolean isFood, String type){
+        this.itemDescription = itemDescription;
+        this.amount = amount;
+        this.isFood = isFood;
+        this.type = type;
     }
 
     public boolean isFood() {
@@ -59,37 +61,8 @@ public class Artikel {
         this.unit = unit;
     }
 
-    /**
-     * Setzt die Einheiten in eine Liste
-     */
-    public void createUnitList(){
-        unitList.add(0,"kg");
-        unitList.add(1,"g");
-        unitList.add(2,"mg");
-        unitList.add(3,"l");
-        unitList.add(4,"ml");
-        unitList.add(5,"Stk");
-        unitList.add(6,"Packung(en)");
-        unitList.add(7,"Sack");
-        unitList.add(8,"Schachtel(n)");
-        unitList.add(9,"Flasche(n)");
-        unitList.add(10,"Becher");
-        unitList.add(11,"Tüte(n)");
-
-    }
 
 
 
-//===========================================================
-// ATTRIBUTE
-//===========================================================
 
-    private String itemDescription;
-    private int amount;
-    private String unit;
-    ArrayList<String> unitList = new ArrayList<String>();
-    private boolean isFood = true;
-
-
-
-}//Artikel
+}
