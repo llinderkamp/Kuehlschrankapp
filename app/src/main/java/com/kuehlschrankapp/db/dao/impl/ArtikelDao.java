@@ -23,9 +23,6 @@ public class ArtikelDao extends AbstractDao<Artikel> implements IDao<Artikel> {
         super(context, Artikel.class);
     }
 
-    public List<Artikel> getFavoriteArtikel() {
-        return getAllEntrysAsListWhereEq("favorit", Boolean.valueOf(true));
-    }
 
     public List<Artikel> getAllEntrysAsListFromSpecificKategorie(Kategorie kategorie){
         return  getAllEntrysAsListWhereEq("kategorie_id", kategorie);

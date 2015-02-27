@@ -6,6 +6,8 @@ import com.kuehlschrankapp.db.dao.AbstractDao;
 import com.kuehlschrankapp.db.dao.IDao;
 import com.kuehlschrankapp.db.dto.impl.Vorhandene_Lebensmittel;
 
+import java.util.List;
+
 /**
  * Created by laj on 17.02.2015.
  * Vorhandene_LebensmittelDao
@@ -14,6 +16,10 @@ public class Vorhandene_LebensmittelDao extends AbstractDao<Vorhandene_Lebensmit
 
     public static Vorhandene_LebensmittelDao getInstance(Context context) {
         return new Vorhandene_LebensmittelDao(context);
+    }
+
+    public List<Vorhandene_Lebensmittel> getFavoriteArtikel() {
+        return getAllEntrysAsListWhereEq("favorit", Boolean.valueOf(true));
     }
 
     private Vorhandene_LebensmittelDao(final Context context) {
