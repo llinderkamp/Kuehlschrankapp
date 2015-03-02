@@ -26,11 +26,9 @@ import java.sql.SQLException;
 public class AbstractDatabaseOpenHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABSE_NAME = "database.db";
     private static final int DATABSE_VERSION = 1;
-    private Context context;
 
     public AbstractDatabaseOpenHelper(Context context) {
         super(context, DATABSE_NAME, null, DATABSE_VERSION, R.raw.ormlite_config);
-        this.context = context;
     }
 
     /**
@@ -178,7 +176,7 @@ public class AbstractDatabaseOpenHelper extends OrmLiteSqliteOpenHelper {
         runtimeExceptionDaoKategorie.create(haushalt);
         Kategorie backzutaten = new Kategorie("Backzutaten", "ic_backzutaten");
         runtimeExceptionDaoKategorie.create(backzutaten);
-        Kategorie aufstriche = new Kategorie("Aufstriche", "ic_aufstriche");
+        Kategorie aufstriche = new Kategorie("Aufstriche", "ic_aufstrich");
         runtimeExceptionDaoKategorie.create(aufstriche);
         Kategorie getraenke = new Kategorie("Getränke", "ic_getraenke");
         runtimeExceptionDaoKategorie.create(getraenke);
