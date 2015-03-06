@@ -19,7 +19,7 @@ public class Vorhandene_LebensmittelDao extends AbstractDao<Vorhandene_Lebensmit
     }
 
     public List<Vorhandene_Lebensmittel> getFavoriteArtikel() {
-        return getAllEntrysAsListWhereEq("favorit", Boolean.valueOf(true));
+        return getAllEntriesAsListWhereEq("favorit", Boolean.valueOf(true));
     }
 
     private Vorhandene_LebensmittelDao(final Context context) {

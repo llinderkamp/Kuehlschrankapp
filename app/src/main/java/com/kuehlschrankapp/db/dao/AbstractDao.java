@@ -58,7 +58,7 @@ public abstract class AbstractDao<T> extends AbstractDatabaseOpenHelper implemen
     }
 
     @Override
-    public List<T> getAllEntrysAsList() {
+    public List<T> getAllEntriesAsList() {
         final RuntimeExceptionDao<T, ?> runtimeExceptionDao = getRuntimeExceptionDao(clazz);
         return runtimeExceptionDao.queryForAll();
     }
@@ -78,7 +78,7 @@ public abstract class AbstractDao<T> extends AbstractDatabaseOpenHelper implemen
         return null;
     }
 
-    protected final List<T> getAllEntrysAsListWhereEq(String fieldName, Object value) {
+    protected final List<T> getAllEntriesAsListWhereEq(String fieldName, Object value) {
         final RuntimeExceptionDao<T, ?> runtimeExceptionDao = getRuntimeExceptionDao(clazz);
         return runtimeExceptionDao.queryForEq(fieldName, value);
     }

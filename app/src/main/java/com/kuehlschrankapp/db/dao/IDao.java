@@ -18,7 +18,7 @@ public interface IDao<T> {
 
     void update(List<T> list2Update);
 
-    List<T> getAllEntrysAsList();
+    List<T> getAllEntriesAsList();
 
     List<T> getListForPreparedQuery(PreparedQuery<T> preparedQuery);
 }

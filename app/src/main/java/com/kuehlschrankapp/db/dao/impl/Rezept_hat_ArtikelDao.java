@@ -24,6 +24,6 @@ public class Rezept_hat_ArtikelDao extends AbstractDao<Rezept_hat_Artikel> imple
     }
 
     public List<Rezept_hat_Artikel> getAllArtikelFromRezept(Rezept rezept){
-        return  getAllEntrysAsListWhereEq("rezept_id", rezept);
+        return getAllEntriesAsListWhereEq("rezept_id", rezept);
     }
 }

@@ -24,11 +24,11 @@ public class ArtikelDao extends AbstractDao<Artikel> implements IDao<Artikel> {
     }
 
 
-    public List<Artikel> getAllEntrysAsListFromSpecificKategorie(Kategorie kategorie){
-        return  getAllEntrysAsListWhereEq("kategorie_id", kategorie);
+    public List<Artikel> getAllEntriesAsListFromSpecificKategorie(Kategorie kategorie) {
+        return getAllEntriesAsListWhereEq("kategorie_id", kategorie);
     }
 
     public List<Artikel> getAllNichtLebensmittel(){
-        return  getAllEntrysAsListWhereEq("istLebensmittel", Boolean.valueOf(false));
+        return getAllEntriesAsListWhereEq("istLebensmittel", Boolean.valueOf(false));
     }
 }
