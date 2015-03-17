@@ -17,13 +17,13 @@ public class Artikel {
     @DatabaseField
     private String name;
 
-    @DatabaseField (foreign = true, columnName = "einheit_einkauf_id", foreignColumnName = Einheit.ID_FIELD_NAME)
+    @DatabaseField(foreign = true, columnName = "einheit_einkauf_id", foreignColumnName = Einheit.ID_FIELD_NAME)
     private Einheit einheitEinkauf;
 
-    @DatabaseField (foreign = true, columnName = "einheit_kochen_id", foreignColumnName = Einheit.ID_FIELD_NAME)
+    @DatabaseField(foreign = true, columnName = "einheit_kochen_id", foreignColumnName = Einheit.ID_FIELD_NAME)
     private Einheit einheitKochen;
 
-    @DatabaseField (foreign = true, columnName = "kategorie_id", foreignColumnName = Kategorie.ID_FIELD_NAME )
+    @DatabaseField(foreign = true, columnName = "kategorie_id", foreignColumnName = Kategorie.ID_FIELD_NAME)
     private Kategorie kategorie;
 
     @DatabaseField
@@ -102,7 +102,7 @@ public class Artikel {
 
     @Override
     public String toString() {
-        return einheitEinkauf + " " + name + " " + kategorie;
+        return name;
     }
 
 }

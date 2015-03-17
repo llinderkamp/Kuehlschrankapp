@@ -74,4 +74,9 @@ public class Rezept {
         this.portionen = portionen;
         this.zubereitungszeit = zubereitungszeit;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

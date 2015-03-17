@@ -52,8 +52,13 @@ public class Einheit {
         this.einheit = einheit;
         this.kuerzel = kuerzel;
     }
+
     @Override
     public String toString() {
-        return  einheit + " " + kuerzel;
+        return kuerzel;
+    }
+
+    public String toStringEinheitName() {
+        return einheit;
     }
 }
